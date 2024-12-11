@@ -10,8 +10,6 @@ import Show from './pages/Posts/PostDetails.jsx'
 import Default from './layouts/Default'
 
 
-
-
 function App() {
 
   const [posts, setPosts] = useState([])

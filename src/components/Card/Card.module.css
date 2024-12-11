@@ -7,9 +7,6 @@
     box-shadow: 4px 6px 8px rgb(9, 31, 4);
 }
 
-.card:hover {
-    opacity: 80%;
-}
 
 .image {
     width: 100%;

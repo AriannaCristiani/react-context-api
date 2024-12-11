@@ -93,9 +93,7 @@ nav .active {
   width: 400px;
 }
 
-.post_list>* {
-  cursor: pointer;
-}
+
 
 .link {
   background-color: #3e794d;
@@ -127,4 +125,10 @@ nav .active {
   margin-top: 40px;
   font-size: 15px;
   cursor: pointer;
+}
+
+.title_card {
+  color: #296638;
+  font-size: 22px;
+  font-weight: bold;
 }
