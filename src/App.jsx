@@ -5,8 +5,8 @@ import axios from 'axios'
 import { BASE_API_URI } from './baseUrl.js'
 import Home from './pages/Home'
 import About from './pages/About'
-import Index from './pages/Posts/Index.jsx'
-import Show from './pages/Posts/Show.jsx'
+import Index from './pages/Posts/PostPage.jsx'
+import Show from './pages/Posts/PostDetails.jsx'
 import Default from './layouts/Default'
 
 
