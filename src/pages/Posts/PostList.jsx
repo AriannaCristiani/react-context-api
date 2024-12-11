@@ -1,12 +1,12 @@
-import Card from "../../components/Card/Card"
-import GlobalContext from "../../Context/GlobalContext"
+import Card from "../../components/Card/PostCard"
+import PostsContext from "../../Context/PostsContext"
 import { useContext } from 'react';
 import { useEffect } from 'react';
 
 
 export default function postList() {
 
-    const { posts, fetchPosts } = useContext(GlobalContext)
+    const { posts, fetchPosts } = useContext(PostsContext)
 
     useEffect(() => {
         fetchPosts()

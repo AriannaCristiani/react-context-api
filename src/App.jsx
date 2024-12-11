@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
-import GlobalContext from './Context/GlobalContext.js'
+import PostsContext from './Context/PostsContext.js'
 import axios from 'axios'
 import { BASE_API_URI } from './baseUrl.js'
 import Home from './pages/Home'
@@ -29,7 +29,7 @@ function App() {
 
 
   return (
-    <GlobalContext.Provider value={{ posts, setPosts, fetchPosts }}>
+    <PostsContext.Provider value={{ posts, setPosts, fetchPosts }}>
       <BrowserRouter>
         <Routes>
           <Route element={<Default />}>
@@ -42,7 +42,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </GlobalContext.Provider>
+    </PostsContext.Provider>
 
   )
 }

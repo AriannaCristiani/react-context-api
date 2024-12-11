@@ -24,28 +24,36 @@ export default function Show() {
     const navigate = useNavigate();
 
 
-    if (!posts) {
-        return
-    }
-
     return (
         <main>
             <div className="container">
-                <button className='back_btn' onClick={() => navigate(-1)}>Torna indietro</button>
-                <h1 className="main_title">{posts.title}</h1>
+                <button className='back_btn' onClick={() => navigate(-1)}>Torna ai post</button>
             </div>
-            <section className='show_container'>
-                <figure>
-                    <img
-                        className="img_show"
-                        src={posts.image ? `${BASE_API_URI}/${posts.image}` : placeHolderSrc}
-                        alt={posts.title}
-                    />
-                </figure>
+            <section>
+                {posts ?
+                    <>
+                        <div className='container'>
+                            <h1 className="main_title">{posts.title}</h1>
+                        </div>
+                        <div className='show_container'>
+                            <figure>
+                                <img
+                                    className="img_show"
+                                    src={posts.image ? `${BASE_API_URI}/${posts.image}` : placeHolderSrc}
+                                    alt={posts.title}
+                                />
+                            </figure>
 
-                <div className="container">
-                    <p>{posts.content}</p>
-                </div>
+                            <div className="container">
+                                <p>{posts.content}</p>
+                            </div>
+                        </div>
+                    </> :
+                    <div>
+                        <h1 className="main_title" >Post non trovato</h1>
+                    </div>
+
+                }
             </section>
         </main>
     );
