@@ -6,18 +6,18 @@ import { BASE_API_URI } from "../../baseUrl"
 export default function Index() {
 
 
-    const [posts, setPosts] = useState([])
+    // const [posts, setPosts] = useState([])
 
-    function fetchPosts() {
+    // function fetchPosts() {
 
-        axios.get(`${BASE_API_URI}/posts`)
-            .then(res => {
-                setPosts(res.data.filteredPosts)
-            })
-            .catch(err => {
-                console.error(err)
-            })
-    }
+    //     axios.get(`${BASE_API_URI}/posts`)
+    //         .then(res => {
+    //             setPosts(res.data.filteredPosts)
+    //         })
+    //         .catch(err => {
+    //             console.error(err)
+    //         })
+    // }
 
     useEffect(() => {
         fetchPosts()
