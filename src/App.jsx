@@ -1,4 +1,6 @@
-import { BrowserRouter, Route, Routes, useState } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { useState } from 'react'
+import GlobalContext from './Context/GlobalContext.js'
 import axios from 'axios'
 import { BASE_API_URI } from './baseUrl.js'
 import Home from './pages/Home'
@@ -24,7 +26,6 @@ function App() {
         console.error(err)
       })
   }
-
 
 
   return (

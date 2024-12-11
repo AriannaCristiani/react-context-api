@@ -1,10 +1,12 @@
 import Card from "../../components/Card/Card"
-import axios from 'axios'
-import { useEffect, useState } from 'react';
-import { BASE_API_URI } from "../../baseUrl"
+import { useEffect } from 'react';
+import { useContext } from 'react';
+import GlobalContext from "../../Context/GlobalContext";
+
 
 export default function Index() {
 
+    const { posts, fetchPosts } = useContext(GlobalContext)
 
     // const [posts, setPosts] = useState([])
 
